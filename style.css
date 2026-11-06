@@ -1,0 +1,33 @@
+:root{color-scheme:light;--paper:#f5f1e8;--ink:#2b332d;--green:#365442;--muted:#686d62;--rule:#d8d6c8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.86' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.36' filter='url(%23n)'/%3E%3C/svg%3E")}
+.page{position:relative;width:min(100% - 64px,1000px);margin:auto}
+.masthead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--rule);padding:30px 0 23px}
+.wordmark{font-size:21px;letter-spacing:-.5px;text-decoration:none;color:var(--green)}
+.wordmark span{color:#9c805a}
+.edition,.eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+main{padding:42px 0 10px}
+article{width:fit-content;max-width:100%;margin:0 auto}
+.ornament{color:#8f987e;font-size:25px;margin-bottom:22px}
+.eyebrow{margin:0 0 16px;font-size:9px;letter-spacing:2.1px}
+h1{font-size:clamp(32px,5.8vw,49px);font-weight:400;letter-spacing:-1.6px;line-height:1.15;margin:0 0 14px;color:var(--green)}
+.byline{font-size:14px;color:var(--muted);font-style:italic;margin:0 0 37px}
+.poem{font-size:clamp(14px,4.1vw,20px);line-height:1.65;letter-spacing:.02px}
+.poem p{margin:0 0 23px}
+.poem span{display:block}
+.poem p:last-child{margin-bottom:0}
+.endmark{font-size:24px;color:#8f987e;margin-top:23px}
+.actions{display:flex;justify-content:center;gap:24px;margin:35px 0 0;padding-top:23px;border-top:1px solid var(--rule)}
+button{font:12px Arial,Helvetica,sans-serif;line-height:1.4;color:var(--green);background:transparent;border:0;border-bottom:1px solid #b6bfaf;padding:8px 1px;cursor:pointer;min-height:38px}
+button span{margin-left:5px}
+button:hover{border-color:var(--green);color:#142f1d}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+.status{min-height:17px;margin:12px 0 0;text-align:center;font:12px/1.4 Arial,Helvetica,sans-serif;color:var(--muted)}
+footer{display:flex;justify-content:space-between;gap:8px;padding:13px 0 25px;font:10px/1.5 Arial,Helvetica,sans-serif;color:var(--muted)}
+footer p{margin:0}
+::selection{background:#d7dfcc}
+@media(min-width:1200px){main{padding-top:47px}}
+@media(max-width:560px){.page{width:calc(100% - 40px)}.masthead{padding:22px 0 18px}.wordmark{font-size:19px}main{padding-top:32px}.ornament{margin-bottom:18px}.byline{margin-bottom:29px}.poem{line-height:1.8}.poem p{margin-bottom:21px}.actions{margin-top:24px;padding-top:15px}footer{flex-direction:column;align-items:center;gap:4px;font-size:10px;padding-top:8px}}
+@media(max-width:350px){.page{width:calc(100% - 32px)}h1{font-size:30px}.eyebrow{font-size:8px;letter-spacing:1.7px}.poem{font-size:14px}}
+@media print{body{background:white}.page{width:100%}.masthead,.actions,.status{display:none}main{padding-top:0}.ornament{display:none}article{break-inside:avoid}.poem{font-size:14pt}h1{font-size:30pt}footer{margin-top:30px;justify-content:center}body::before{display:none}}
